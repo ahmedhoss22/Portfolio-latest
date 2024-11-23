@@ -122,7 +122,7 @@ let portfolioSection = document.getElementById("portfolio");
 // Generate portfolio items dynamically
 projects.map((project, index) => {
   portfolioSection.innerHTML += `
-    <div data-aos="fade-up" data-aos-delay="${project.delay}" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-6 mt--30 mt_md--30 mt_sm--30">
+    <div data-aos="fade-up" data-aos-delay="${project.delay}" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--30 mt_md--30 mt_sm--30">
       <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="${project.modalTarget}">
         <div class="inner">
           <div class="thumbnail">
