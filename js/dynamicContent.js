@@ -53,29 +53,66 @@ exp.map((ele) => {
 // Define projects array
 let projects = [
   {
-    imgSrc: "images/portfolio-07.png",
-    imgAlt: "Bookify Admin Dashboard",
-    category: "Dashboard",
-    title: "Bookify Admin Dashboard",
+    id: 1,
+    imgSrc: "images/mockups/vej-store.png",
+    imgAlt: "vej-store",
+    category: "E-commerce",
+    title: "Vej-store",
     delay: 100,
-    modalTarget: "#exampleModalCenter",
-    description: "Developed Bookify Admin Dashboard using ASP.NET Core MVC with clean architecture and repository pattern. Managed Ajax requests and DataTables, integrated WhatsApp and Gmail, and deployed to Monster Aspnet hosting with Hangfire for background jobs. Utilized Serilog for error handling, Fluent Validation, and various libraries for enhanced functionality.",
-    projectLink: "http://bookifyapplication.runasp.net/",
-    projectEmail: "admin@bookify.com",
-    projectPassword: "P@ssword123"
+    modalTarget: "#modal1",
+    projectLink: "https://vej-store.com/",
+    // projectEmail: "admin@bookify.com",
+    // projectPassword: "P@ssword123"
   },
   {
-    imgSrc: "images/portfolio-13.png",
-    imgAlt: "Furnihuture",
-    category: "Development",
-    title: "Furnihuture",
+    imgSrc: "images/mockups/ahmed-galal.png",
+    imgAlt: "Ahmed galal clinic",
+    category: "Clinic-reservation",
+    title: "Ahmed galal clinic",
     delay: 500,
-    modalTarget: "#exampleModalCenter7",
-    description: "Description for Furnihuture project.",
+    modalTarget: "#modal2",
+    description: "Description for Ahmed galal clinic project.",
     projectLink: "#",
-    projectEmail: "example@example.com",
-    projectPassword: "password123"
+    // projectEmail: "example@example.com",
+    // projectPassword: "password123"
   },
+  {
+    imgSrc: "images/mockups/sedra-fatma.JPG",
+    imgAlt: "",
+    category: "Online Booking",
+    title: "Sedrat fatima",
+    delay: 500,
+    modalTarget: "#modal5",
+    description: "Description for Online academy project.",
+    projectLink: "http://sedratfatima.com/",
+    // projectEmail: "example@example.com",
+    // projectPassword: "password123"
+  },
+  {
+    imgSrc: "images/mockups/xo.png",
+    imgAlt: "Match-xo",
+    category: "Online game",
+    title: "Match-xo",
+    delay: 500,
+    modalTarget: "#modal3",
+    description: "Description for Match-xo project.",
+    projectLink: "#",
+    // projectEmail: "example@example.com",
+    // projectPassword: "password123"
+  },
+  {
+    imgSrc: "images/mockups/educational-academy.JPG",
+    imgAlt: "Online academy",
+    category: "E-learning",
+    title: "Online academy",
+    delay: 500,
+    modalTarget: "#modal4",
+    description: "Description for Online academy project.",
+    projectLink: "#",
+    // projectEmail: "example@example.com",
+    // projectPassword: "password123"
+  },
+
   // Add more projects as needed
 ];
 
@@ -100,7 +137,7 @@ projects.map((project, index) => {
               </div>
             </div>
             <h4 class="title">
-              <a href="javascript:void(0)">${project.title} <i class="feather-arrow-up-right"></i></a>
+              <a>${project.title} <i class="feather-arrow-up-right"></i></a>
             </h4>
           </div>
         </div>
@@ -109,6 +146,9 @@ projects.map((project, index) => {
   `;
 });
 
+function navigateUSer(route) {
+  window.open(route)
+}
 // You may need to handle the modal content dynamically as well, similar to how the portfolio items are generated.
 
 
@@ -119,4 +159,162 @@ projects.map((project, index) => {
 
 
 
-console.log(expSection);
+const modalsData = [
+  {
+    id: "modal1",
+    images: [
+      "images/vej-store/home.png",
+      "images/vej-store/hodie.png",
+    ],
+    title: "vej-store",
+    description: `The project is a modern WordPress-based e-commerce store specializing in clothing, offering a seamless shopping experience with diverse categories, product customization options, and Arabic support. It features easy order management, multiple payment methods, and precise delivery details. The store is fully responsive, optimized for speed, and ensures data security.`,
+    projectLink: "https://vej-store.com/",
+  },
+  {
+    id: "modal2",
+    images: [
+      "images/ahmed galal/home.png",
+      "images/ahmed galal/contact.png",
+      "images/ahmed galal/reservations.png",
+    ],
+    title: "Ahmed galal clinic",
+    description: `The Internal Medicine Clinic Management System is a web app tailored for small to medium-sized clinics, helping doctors efficiently manage appointments, patient interactions, and schedules. It includes features like electronic booking, patient records, appointment reminders, and a blog for publishing medical awareness articles. Built with React.js, Node.js, and PostgreSQL, the system offers a user-friendly interface, automated notifications, and insightful reports to enhance clinic operations.`,
+    projectLink: "https://drahmedgalalcenter.com/",
+  },
+  {
+    id: "modal3",
+    images: [
+      "images/xo/1.png",
+      "images/xo/2.png",
+      "images/xo/3.png",
+    ],
+    title: "Match-xo",
+    description: `The X-O Game is an engaging online multiplayer game where players compete against friends or challenge random opponents worldwide. Built using Next.js and Nest.js with WebSockets integration, it ensures a seamless real-time gaming experience. Players can earn coins through victories, purchase more coins, and exchange them for in-game rewards, all within an interactive and user-friendly interface.`,
+    projectLink: "#",
+  },
+  {
+    id: "modal4",
+    images: [
+      "images/sef/Home.png",
+      "images/sef/cv.png",
+      "images/sef/courses.png",
+      "images/sef/instructor.png",
+    ],
+    title: "Educational Academy",
+    description: `The integrated educational platform offers comprehensive learning opportunities, featuring four user roles: Admin, Teacher, Student, and Editor. Built with React.js, Node.js (Express.js), and MongoDB, it uses JWT for authentication and is deployed via Docker and AWS EC2. Key features include user and course management for Admins, content creation and exam scheduling for Teachers, course access and job applications for Students, and news and job posting for Editors, all within a Material-UI-styled interface.`,
+    projectLink: "#",
+  },
+  {
+    id: "modal5",
+    images: [
+      "images/fatma/1.png",
+      "images/fatma/2.png",
+      "images/fatma/3.png",
+      "images/fatma/4.png",
+    ],
+    title: "Sedrat fatima",
+    description: `A comprehensive booking system for wedding halls, chalets, and resorts, developed with React and Node.js. The platform allows users to make and manage bookings seamlessly. The admin panel provides tools for approving, postponing, or managing reservations, along with financial system controls. It also features an integrated ERP system for efficient employee management. Designed for scalability and user-friendly operation, it ensures smooth management of all booking and operational processes.`,
+    projectLink: "#",
+  },
+
+];
+
+function generateModals(data) {
+  const container = document.getElementById("modals-container");
+
+  data.forEach(({ id, images, title, description, projectLink, projectEmail, projectPassword }) => {
+    const indicators = images
+      .map(
+        (img, index) => `
+          <button
+            type="button"
+            data-bs-target="#${id}-carousel"
+            data-bs-slide-to="${index}"
+            class="${index === 0 ? "active" : ""}"
+            aria-current="${index === 0 ? "true" : "false"}"
+            aria-label="Slide ${index + 1}"
+          ></button>`
+      )
+      .join("");
+
+    const slides = images
+      .map(
+        (img, index) => `
+          <div class="carousel-item ${index === 0 ? "active" : ""}">
+            <img class="w-100 h-100" src="${img}" alt="slide ${index + 1}">
+          </div>`
+      )
+      .join("");
+
+    const modalHTML = `
+      <div class="modal fade" id="${id}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i data-feather="x"></i></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="portfolio-popup-thumbnail">
+                    <div class="image">
+                      <div id="${id}-carousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          ${indicators}
+                        </div>
+                        <div class="carousel-inner">
+                          ${slides}
+                        </div>
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#${id}-carousel"
+                          data-bs-slide="prev"
+                        >
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#${id}-carousel"
+                          data-bs-slide="next"
+                        >
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="text-content">
+                    <h3><span>${title}</span></h3>
+                    <p class="mb--30">${description}</p>
+                    <div class="button-group mt--20">
+                      <a href="${projectLink}" target="_blank" class="rn-btn">
+                        <span>${projectLink != "#" ? "VIEW PROJECT" : "Not availabe now"}</span>
+                        <i data-feather="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+    container.innerHTML += modalHTML;
+  });
+}
+
+// Call the function to generate modals
+generateModals(modalsData);
